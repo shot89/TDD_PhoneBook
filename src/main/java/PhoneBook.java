@@ -21,7 +21,7 @@ public class PhoneBook {
     }
 
     public String findByName(String name){
-        return null;
+        return PHONE_BOOK.entrySet().stream().filter((x)->x.getValue().equals(name)).map(Map.Entry::getKey).findFirst().get();
     }
 
 }
