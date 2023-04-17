@@ -20,4 +20,8 @@ public class PhoneBook {
         return PHONE_BOOK.get(number);
     }
 
+    public String findByName(String name){
+        return null;
+    }
+
 }
