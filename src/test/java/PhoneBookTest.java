@@ -5,8 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -61,13 +60,13 @@ class PhoneBookTest {
         String name1 = "admin";
         String number2 = "89991231234";
         String name2 = "Vasya";
-        List<String> expected = List.of(name1, name2);
-
+        List<String> expected = List.of(name2, name1);
+        
         phoneBook.add(number1, name1);
         phoneBook.add(number2, name2);
         List<String> result = phoneBook.printAllNames();
-
+        
         Assertions.assertEquals(expected, result);
-
+                
     }
 }
