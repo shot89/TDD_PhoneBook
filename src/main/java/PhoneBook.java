@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -22,6 +23,10 @@ public class PhoneBook {
 
     public String findByName(String name){
         return PHONE_BOOK.entrySet().stream().filter((x)->x.getValue().equals(name)).map(Map.Entry::getKey).findFirst().get();
+    }
+
+    public List<String> printAllNames(){
+        return null;
     }
 
 }
